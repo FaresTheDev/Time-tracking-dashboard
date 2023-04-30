@@ -213,7 +213,7 @@ h3 {
 }
 
 /* media querry */
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 600px) {
   
   .container {
     display: flex;
