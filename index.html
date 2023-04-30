@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body>
+
+  <!-- main container -->
+  <div class="container">
+    
+    <!-- the left side: user info -->
+    <div class="grid-row-span">
+      <!-- user information -->
+      <div class="user-info">
+        <img src="./images/image-jeremy.png" class="user-image" alt="user image">
+        
+        <div class="name-tag">
+          <h2>Report for</h2>
+          <h1 class="user-name">Jeremy Robson</h1>
+        </div>
+      </div>
+  
+      <!-- toggle buttons between daily, weekly and monthly -->
+      <div class="toggle-time">
+        <button id="daily">Daily</button>
+        <button id="weekly">Weekly</button>
+        <button id="monthly">Monthly</button>
+      </div>
+    </div>
+   
+    <!-- right side: cards -->
+    <div class="card-bg work-card-bg-color">
+      <img class="icon" src="./images/icon-work.svg">
+
+        <div class="card-container">
+          <div class="card-head">
+            <h2>Work</h2>
+            <img src="./images/icon-ellipsis.svg">
+          </div>
+
+          <div class="card-text">
+            <h1 class="time-count" id="current-work-count"></h1>
+          <h3 id="previous-work-count"></h3>
+          </div>
+      </div>
+    </div>
+
+    <div class="card-bg play-card-bg-color">
+
+      <img class="icon" src="./images/icon-play.svg">
+      <div class="card-container">
+        <div class="card-head">
+          <h2>Play</h2>
+          <img src="./images/icon-ellipsis.svg">
+        </div>
+
+      <div class="card-text">
+        <h1 class="time-count" id="current-play-count"></h1>
+        <h3 id="previous-play-count"></h3>
+      </div>
+  </div>
+
+  </div>
+  <div class="card-bg study-card-bg-color">
+
+    <img class="icon" src="./images/icon-study.svg">
+    <div class="card-container">
+      <div class="card-head">
+        <h2>Study</h2>
+        <img src="./images/icon-ellipsis.svg">
+      </div>
+        <div class="card-text">
+        <h1 class="time-count" id="current-study-count"></h1>
+        <h3 id="previous-study-count"></h3>
+      </div>
+  </div>
+  
+</div>
+  
+<div class="card-bg exercise-card-bg-color">
+
+  <img class="icon" src="./images/icon-exercise.svg">
+  <div class="card-container">
+    <div class="card-head">
+      <h2>Exercise</h2>
+      <img src="./images/icon-ellipsis.svg">
+    </div>
+      <div class="card-text">
+      <h1 class="time-count" id="current-exercise-count"></h1>
+      <h3 id="previous-exercise-count"></h3>
+    </div>
+</div>
+</div><div class="card-bg social-card-bg-color">
+
+  <img class="icon" src="./images/icon-social.svg">
+  <div class="card-container">
+    <div class="card-head">
+      <h2>Social</h2>
+      <img src="./images/icon-ellipsis.svg">
+    </div>
+
+    <div class="card-text">
+      <h1 class="time-count" id="current-social-count"></h1>
+      <h3 id="previous-social-count"></h3>
+    </div>
+</div>
+</div><div class="card-bg selfcare-card-bg-color">
+
+  <img class="icon" src="./images/icon-self-care.svg">
+  <div class="card-container">
+    <div class="card-head">
+      <h2>Self Care</h2>
+      <img src="./images/icon-ellipsis.svg">
+    </div>
+    <div class="card-text">
+      <h1 class="time-count" id="current-self-care-count"></h1>
+      <h3 id="previous-self-care-count"></h3>
+    </div>
+</div>
+</div>
+  <!-- footer -->
+  <div class="attribution">
+    <p>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://twitter.com/FaresTheDev" target="_blank">FaresTheDev</a>.
+    </p>
+  </div>
+
+  <script src="timeData.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

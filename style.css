@@ -1,0 +1,296 @@
+/* linking the font from Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+/* global design values */
+:root {
+  /* main colors */
+  --primary: rgb(88, 71, 235);
+  --very-dark-blue: rgb(15, 20, 36);
+  --dark-blue: rgb(28, 31, 74);
+  --desaturated-blue: rgb(111, 118, 200);
+  --pale-blue: rgb(189, 193, 255);
+
+  /* colors of the sections */
+  --Work-color: rgb(255, 140, 102);
+  --play-color: rgb(86, 194, 230);
+  --study-color: rgb(255, 92, 124);
+  --exercise-color: rgb(74, 207, 129);
+  --social-color: rgb(117, 54, 211);
+  --selfcare-color: rgb(241, 198, 91);
+
+  /* Typography */
+  --font-family: "Rubik", sans-serif;
+  --card-title-font-size: 18px;
+  --light-weight: 300;
+  --regular-weight: 400;
+  --bold-weight: 500;
+
+  /* width of the screen */
+  --desktop-width: 1440px;
+  --mobile-width: 375px;
+
+  /* borders */
+  --radius: 20px;
+}
+
+body {
+  box-sizing: border-box;
+  max-width: var(--desktop-width);
+  max-height: 100vh;
+  margin: 5%;
+  margin-top: 12%;
+  background-color: var(--very-dark-blue);
+  font-family: var(--font-family);
+}
+
+.container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-row-span {
+  grid-row: span 2;
+}
+
+.user-info {
+  height: 250px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  background-color: var(--primary);
+  color: whitesmoke;
+  box-shadow: 0 20px var(--dark-blue);
+  border-radius: var(--radius);
+}
+
+.user-image {
+  width: 70px;
+  margin-bottom: 20px;
+  border: 3px solid whitesmoke;
+  border-radius: 50%;
+}
+
+.user-name {
+  margin: 0;
+  color: whitesmoke;
+  font-weight: var(--light-weight);
+  letter-spacing: 1px;
+}
+
+.name-tag > h2 {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: var(--regular-weight);
+  color: var(--pale-blue);
+}
+
+/* toggles styling */
+.toggle-time {
+  padding: 25px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: flex-start;
+  background-color: var(--dark-blue);
+  border-radius: 0 0 20px 20px;
+}
+
+.toggle-time > button {
+  width: fit-content;
+  margin-bottom: 5px;
+  display: flex;
+  background-color: transparent;
+  border: none;
+  color: var(--pale-blue);
+  font-family: var(--font-family);
+  font-weight: var(--regular-weight);
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle-time > button:hover,
+.toggle-time > button:focus {
+  color: whitesmoke;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* cards styling */
+.card-bg {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.work-card-bg-color {
+  background-color: var(--Work-color);
+}
+
+.play-card-bg-color {
+  background-color: var(--play-color);
+}
+
+.study-card-bg-color {
+  background-color: var(--study-color);
+}
+
+.exercise-card-bg-color {
+  background-color: var(--exercise-color);
+}
+
+.social-card-bg-color {
+  background-color: var(--social-color);
+}
+
+.selfcare-card-bg-color {
+  background-color: var(--selfcare-color);
+}
+
+.icon {
+  position: relative;
+  top: -10px;
+  margin-right: 15px;
+  width: 70px;
+  float: right;
+}
+
+.card-container {
+  position: relative;
+  top: 30px;
+  padding: 20px;
+  background-color: var(--dark-blue);
+  border-radius: var(--radius);
+  box-shadow: 0 15px var(--dark-blue);
+}
+
+.card-text > h1,
+h2,
+h3 {
+  margin: 0;
+  color: whitesmoke;
+}
+
+.card-text > h1 {
+  margin-bottom: 10px;
+  font-weight: var(--light-weight);
+  font-size: 50px;
+}
+
+.card-text > h3 {
+  font-weight: var(--light-weight);
+  font-size: 17px;
+  color: var(--pale-blue);
+}
+
+.card-head {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-head > img {
+  position: relative;
+  left: 60px;
+}
+
+.card-head > h2 {
+  font-size: var(--card-title-font-size);
+  font-weight: var(--bold-weight);
+}
+
+.attribution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+}
+
+/* media querry */
+@media only screen and (max-width: 376px) {
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: fit-content;
+  }
+
+  .user-image {
+    margin: 0;
+  }
+
+  .user-name {
+    font-size: 25px;
+  }
+
+  .user-info > h2 {
+    font-size: 14px;
+  }
+
+  .toggle-time {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+  }
+
+  .toggle-time > button {
+    font-size: 17px;
+  }
+  
+  /* cards styling */
+  .card-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    width: 300px;
+  }
+  
+  .card-text > h1,
+  h2,
+  h3 {
+    margin: 0;
+    color: whitesmoke;
+  }
+
+  .card-text > h1 {
+    margin-bottom: 10px;
+    font-weight: var(--light-weight);
+    font-size: 35px;
+  }
+
+  .card-container > h3 {
+    font-weight: var(--light-weight);
+    font-size: 17px;
+    color: var(--pale-blue);
+  }
+
+  .card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-head > img {
+    position: relative;
+    left: 60px;
+  }
+
+  .card-head > h2 {
+    font-size: var(--card-title-font-size);
+    font-weight: var(--bold-weight);
+  }
+}
